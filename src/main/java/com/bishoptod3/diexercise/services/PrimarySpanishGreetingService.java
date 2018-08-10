@@ -1,19 +1,22 @@
 package com.bishoptod3.diexercise.services;
 
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Service;
-
 /**
  * Created by Loky on 01/08/2018.
  */
-@Service
-@Primary
-@Profile( "es" )
+//@Service
+//@Primary
+//@Profile( "es" )
 public class PrimarySpanishGreetingService implements GreetingService{
 
-    @Override
+    private GreetingRepository greetingRepository;
+
+    public PrimarySpanishGreetingService(GreetingRepository greetingRepository) {
+        this.greetingRepository = greetingRepository;
+    }
+
+    //    @Override
+
     public String sayGreeting() {
-        return "Servicio de Saludo Primario";
+        return greetingRepository.getSpanishGreeting();
     }
 }
