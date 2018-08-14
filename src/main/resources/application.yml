@@ -1,0 +1,8 @@
+example:
+  username: John
+  password: password
+  dburl: someURL
+  jms:
+    username: JMS Username
+    password: JMS Password
+    url: JMS URL
