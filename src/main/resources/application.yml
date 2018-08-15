@@ -6,3 +6,11 @@ example:
     username: JMS Username
     password: JMS Password
     url: JMS URL
+
+---
+spring:
+  profiles: de
+
+example:
+  jms:
+    username: JSM Username, but in german
